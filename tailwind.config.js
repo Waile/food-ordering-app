@@ -1,23 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/*.{js,jsx,ts,tsx}","./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
-      colors:{
-        primary :"#030014",
-        secondary: "#151312",
-        light: {
-          100: "#D6C7FF",
-          200: "#A8B5DB",
-          300: "#9CA4AB",
+       colors: {
+        primary: "#FE8C00",
+        white: {
+          DEFAULT: "#ffffff",
+          100: "#fafafa",
+          200: "#FE8C00",
+        },
+        gray: {
+          100: "#878787",
+          200: "#878787",
         },
         dark: {
-          100: "#221F3D",
-          200: "#0F0D23",
+          100: "#181C2E",
         },
-        accent: "#AB8BFF",
-      }
+        error: "#F14141",
+        success: "#2F9B65",
+      },
+      fontFamily: {
+        quicksand: ["QuickSand_Regular", "sans-serif"],
+        "quicksand-bold": ["QuickSand_Bold", "sans-serif"],
+        "quicksand-semibold": ["QuickSand_SemiBold", "sans-serif"],
+        "quicksand-light": ["QuickSand_Light", "sans-serif"],
+        "quicksand-medium": ["QuickSand_Medium", "sans-serif"],
+      },
     },
   },
   future: {
